@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+        <a href="/register">Register</a>
+        <p>Forgot your password? <a href="/forgot-password">Reset it here</a></p>
+        <p>Already have an account? <a href="/login">Login here</a></p>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <!-- Additional form fields for registration -->
+         <!-- Example: <input type="text" id="email" name="email" required> -->
+    </form>
+</body>
+</html>
